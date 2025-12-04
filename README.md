@@ -40,10 +40,10 @@ We use a simple CSV file named contacts.csv.
 
 Example:
 
-email,name,company,product,signup_date
-alice@gmail.com,Alice,Google,Ads,2024-12-01
-bob@gmail.com,Bob,Amazon,AWS,2024-12-02
-rahul@gmail.com,Rahul,Flipkart,Logistics,2024-12-03
+    email,name,company,product,signup_date
+    alice@gmail.com,Alice,Google,Ads,2024-12-01
+    bob@gmail.com,Bob,Amazon,AWS,2024-12-02
+    rahul@gmail.com,Rahul,Flipkart,Logistics,2024-12-03
 
 Column meaning:
 
@@ -61,18 +61,18 @@ The code validates that all required columns exist, so the template variables al
 
 Subject template:
 
-Welcome to {company}, {name}!
-
-Body template:
-
-Hi {name},
-
-Thank you for signing up for {product} on {signup_date}.
-
-We are excited to have you and your team at {company} with us.
-
-Best regards,
-The {company} Team
+    Welcome to {company}, {name}!
+    
+    Body template:
+    
+    Hi {name},
+    
+    Thank you for signing up for {product} on {signup_date}.
+    
+    We are excited to have you and your team at {company} with us.
+    
+    Best regards,
+    The {company} Team
 
 The {name}, {company}, {product}, and {signup_date} placeholders are replaced for each row using the data in the CSV.
 
@@ -170,10 +170,10 @@ STEP 1: Create the CSV file
 
 Create a file named contacts.csv in your project folder:
 
-email,name,company,product,signup_date
-alice@gmail.com,Alice,Google,Ads,2024-12-01
-bob@gmail.com,Bob,Amazon,AWS,2024-12-02
-rahul@gmail.com,Rahul,Flipkart,Logistics,2024-12-03
+    email,name,company,product,signup_date
+    alice@gmail.com,Alice,Google,Ads,2024-12-01
+    bob@gmail.com,Bob,Amazon,AWS,2024-12-02
+    rahul@gmail.com,Rahul,Flipkart,Logistics,2024-12-03
 
 STEP 2: Create the Python script
 
@@ -188,11 +188,11 @@ Create a file named send_workmail_from_csv.py and paste the optimized script, wi
 STEP 3: Configure WorkMail settings
 
 At the top of the script, update:
-
-- WORKMAIL_SMTP_SERVER (e.g. "smtp.mail.ap-south-1.awsapps.com")
-- WORKMAIL_EMAIL (e.g. "your_workmail@yourdomain.com")
-- WORKMAIL_PASSWORD (your WorkMail password)
-- DRY_RUN = True (for testing first)
+    
+    - WORKMAIL_SMTP_SERVER (e.g. "smtp.mail.ap-south-1.awsapps.com")
+    - WORKMAIL_EMAIL (e.g. "your_workmail@yourdomain.com")
+    - WORKMAIL_PASSWORD (your WorkMail password)
+    - DRY_RUN = True (for testing first)
 
 STEP 4: Run in DRY-RUN mode
 
